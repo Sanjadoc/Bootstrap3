@@ -1,0 +1,21 @@
+{
+  "name": "bowerBootstrap",
+  "homepage": "https://github.com/Sanjadoc/Bootstrap3",
+  "authors": [
+    "sanjadoc"
+  ],
+  "description": "Bower for my education project Bootstrap3",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "JS",
+    "Bootstrap3"
+  ],
+  "license": "GPL v3",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}
