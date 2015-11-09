@@ -7,3 +7,12 @@
     margin-top: 50px;
 }
 */
+
+/*Spoiler*/
+a.spoiler:after {
+    content: " [-]";
+}
+
+a.spoiler.collapsed:after {
+    content: " [+]";
+}
