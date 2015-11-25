@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Bootstrap validate Form</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!--Nav-->
+    <div class="navbar navbar-inverse navbar-static-top"><!--navbar-fixed-top,  navbar-fixed-bottom, navbar-static-top-->
+        <div class="container">
+            <div class="navbar-header">
+                <!-- <a class="navbar-brand" href="#">Company</a> -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuId">
+                    <span class="sr-only">Open nav</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-globe"></span> Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menuId">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> Point 1</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-large"></span> Point 2 <b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Point 1</a></li>
+                            <li><a href="#">Point 2</a></li>
+                            <li><a href="#">Point 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-th-list"></span> Point 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-file"></span> Point 3</a></li>
+                    <li><a href="#"><span class=" glyphicon glyphicon-envelope"></span> Point 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- From-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1> Order Form</h1>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputName" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input name="name" type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input name="phone" type="text" class="form-control" id="inputPhone" placeholder="Cellphone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button tupe="submit" class="btn btn-success">Send <span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!--My js file-->
+    <script src="js/common.js"></script>
+
+</body>
+</html>
