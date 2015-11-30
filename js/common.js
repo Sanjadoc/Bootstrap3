@@ -3,12 +3,7 @@
     var app = {
 
         initialize : function () {
-            this.modules();
             this.setUpListeners();
-        },
-
-        modules: function () {
-
         },
 
         setUpListeners: function () {
@@ -19,14 +14,35 @@
         submitForm: function (e) {
             e.preventDefault();
 
-            var form = $(this);
+            var form = $(this),
+                submitBtn = form.find('button[type="submit"]');
 
-            if(app.validateForm(form) === false) return false;
+            if( app.validateForm(form) === false ) return false;
 
-            console.log('go in ajax');
+            submitBtn.attr('disabled', 'disabled');
+
+            var str = form.serialize();
+
+            $.ajax({
+                    url: 'php/contact_progress.php',
+                    type: 'POST',
+                    data: str
+                })
+                .done(function(msg) {
+                    if(msg === "OK"){
+                        var result = "<div = 'bg-success'>Thank you!!!</div>"
+                        form.html(result);
+                    }else{
+                        form.html(msg);
+                    }
+                })
+                .always(function() {
+                    submitBtn.removeAttr('disabled');
+                });
+
         },
 
-        validateForm: function(form) {
+        validateForm: function (form){
             var inputs = form.find('input'),
                 valid = true;
 
@@ -37,14 +53,14 @@
                     val = input.val(),
                     formGroup = input.parents('.form-group'),
                     label = formGroup.find('label').text().toLowerCase(),
-                    textError = 'Input ' + label;
+                    textError = 'Enter ' + label;
 
-                if (val.length === 0) {
+                if(val.length === 0){
                     formGroup.addClass('has-error').removeClass('has-success');
                     input.tooltip({
                         trigger: 'manual',
                         placement: 'right',
-                        title:textError
+                        title: textError
                     }).tooltip('show');
                     valid = false;
                 }else{
@@ -55,9 +71,10 @@
             return valid;
         },
 
-        removeError: function(){
-            $(this).tooltip('destroy').parents('.form-group').removeClass('has-error');;
+        removeError: function () {
+            $(this).tooltip('destroy').parents('.form-group').removeClass('has-error');
         }
+
     }
 
     app.initialize();
