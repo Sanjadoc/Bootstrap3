@@ -1,0 +1,19 @@
+#modal_sidebar .modal-dialog{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    right: auto;
+    width: 60%;
+    background: #FFF;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+}
+
+#modal_sidebar .modal-dialog .modal-content{
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
